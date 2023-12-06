@@ -1,4 +1,4 @@
-import 'package:farmwork_bloc_ver/ui/screen/login_screen.dart';
+import 'package:farmwork_bloc_ver/ui/screen/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,12 +29,14 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+
+        useMaterial3: false,
       ),
-      home: Scaffold(
-        body: LoginScreen(),
-        resizeToAvoidBottomInset: false,
+      home: SafeArea(
+        child: Scaffold(
+          body: DashboardScreen(),
+          resizeToAvoidBottomInset: false,
+        ),
       ),
     );
   }
