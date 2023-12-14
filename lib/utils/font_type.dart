@@ -54,6 +54,11 @@ TextStyle titleLarge = GoogleFonts.lato(
   fontWeight: FontWeight.w400,
   letterSpacing: 0,
 );
+TextStyle? titleLargeWhite = GoogleFonts.lato(
+  fontSize: 22,
+  fontWeight: FontWeight.w400,
+  letterSpacing: 0,
+);
 
 TextStyle headlineSmall = GoogleFonts.lato(
   fontSize: 24,
