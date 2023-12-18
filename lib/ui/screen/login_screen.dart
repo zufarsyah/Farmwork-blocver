@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 16.0,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () => wipDialog(context),
                 child: Text(
                   "Lupa Password?",
                   style: bodySmall,
@@ -125,6 +125,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Processing Data')),
                       );
+                      Navigator.pushReplacementNamed(
+                          context, '/dashboardScreen');
                     }
                   },
                   child: Text(
@@ -143,15 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: OutlinedButton.styleFrom(
                     foregroundColor: darkInfo,
                   ),
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      // If the form is valid, display a snackbar. In the real world,
-                      // you'd often call a server or save the information in a database.
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Processing Data')),
-                      );
-                    }
-                  },
+                  onPressed: () => wipDialog(context),
                   child: Text(
                     'Register',
                     style: bodySmall,
@@ -161,6 +155,22 @@ class _LoginScreenState extends State<LoginScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Future<String?> wipDialog(BuildContext context) {
+    return showDialog<String>(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        title: const Text('Work in Progress'),
+        content: const Text('Fitur ini masih belum tersedia'),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.pop(context, 'OK'),
+            child: const Text('OK'),
+          ),
+        ],
       ),
     );
   }

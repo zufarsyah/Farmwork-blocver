@@ -23,10 +23,15 @@ class NewsListScreen extends StatelessWidget {
           child: ListView.builder(
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return NewsCardWidget(
-                titleNews: 'Lorem ipsum dolor sit amet consectetur.',
-                dateNews: 'Senin, 12-12-2023',
-                pictureLink: 'Sementara',
+              return GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/newsDetailScreen');
+                },
+                child: NewsCardWidget(
+                  titleNews: 'Lorem ipsum dolor sit amet consectetur.',
+                  dateNews: 'Senin, 12-12-2023',
+                  pictureLink: 'Sementara',
+                ),
               );
             },
           ),

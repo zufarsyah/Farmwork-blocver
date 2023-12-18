@@ -2,8 +2,8 @@ import 'package:farmwork_bloc_ver/utils/colors.dart';
 import 'package:farmwork_bloc_ver/utils/font_type.dart';
 import 'package:flutter/material.dart';
 
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+class NewsDetailScreen extends StatelessWidget {
+  const NewsDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -85,7 +85,9 @@ class ProfileScreen extends StatelessWidget {
                 height: 16.0,
               ),
               ButtonProfileWidget(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/editPasswordScreen');
+                },
                 title: 'Ubah Password',
                 color: darkPrimary,
               ),
@@ -93,7 +95,9 @@ class ProfileScreen extends StatelessWidget {
                 height: 16.0,
               ),
               ButtonProfileWidget(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/editProfileScreen');
+                },
                 title: 'Ubah Profile',
                 color: darkPrimary,
               ),
@@ -101,7 +105,9 @@ class ProfileScreen extends StatelessWidget {
                 height: 16.0,
               ),
               ButtonProfileWidget(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/');
+                },
                 title: 'Keluar',
                 color: mainError,
               ),
